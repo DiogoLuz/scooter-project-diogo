@@ -16,7 +16,6 @@ describe("ScooterApp Tests", () => {
 
     const scooterApp = new ScooterApp();
     scooterApp.register(user);
-    console.log(scooterApp);
     scooterApp.logIn("diogoluz", "1234");
   });
 });

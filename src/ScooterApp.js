@@ -18,6 +18,9 @@ class ScooterApp {
     ScooterApp.scooterSessions.push(this);
   }
 
+  get stations() {
+    return this._stations;
+  }
   get registeredUsers() {
     return this._registeredUsers;
   }
