@@ -3,18 +3,17 @@ const User = require("../src/User");
 
 //typeof scooter === object
 describe("scooter object", () => {
+  const scooter = new Scooter("Manhattan", "diogoluz");
   test("Checks if scooter is an object", () => {
-    const scooter = new Scooter("Manhattan", "diogoluz");
     expect(typeof scooter).toBe("object");
   });
 });
 
 //Method tests
 describe("scooter methods", () => {
+  const consoleSpy = jest.spyOn(console, "log");
+  const scooter = new Scooter("Manhattan", "diogoluz");
   test("Checking if rent method works correctly", () => {
-    const scooter = new Scooter("Manhattan", "diogoluz");
-    const consoleSpy = jest.spyOn(console, "log");
-
     scooter.rent();
 
     expect(consoleSpy).toHaveBeenCalledWith("Enjoy your ride!");
