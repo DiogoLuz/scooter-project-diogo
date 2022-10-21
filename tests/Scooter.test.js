@@ -18,7 +18,6 @@ describe("scooter methods", () => {
 
     expect(consoleSpy).toHaveBeenCalledWith("Enjoy your ride!");
   });
-  //rent method
   //dock method
   //requestRepair method
   //charge method
