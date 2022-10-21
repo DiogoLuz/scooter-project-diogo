@@ -49,7 +49,7 @@ class Scooter {
     } else if (this._isBroken === false && this._charge <= 20) {
       console.log("Scooter low on battery, please charge");
     } else {
-      console.log("Scooter is broken, please send a reqpair request.");
+      console.log("Scooter is broken, please send a repair request.");
     }
   }
 }
