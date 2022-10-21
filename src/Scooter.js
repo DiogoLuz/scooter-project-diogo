@@ -32,6 +32,17 @@ class Scooter {
   get docked() {
     return this._docked;
   }
+
+  rent() {
+    if (this._isBroken === false && this._charge > 20) {
+      this._docked = false;
+      console.log("Enjoy your ride!");
+    } else if (this._isBroken === false && this._charge <= 20) {
+      console.log("Scooter low on battery, please charge");
+    } else {
+      console.log("Scooter is broken, please send a reqpair request.");
+    }
+  }
 }
 
 module.exports = Scooter;
