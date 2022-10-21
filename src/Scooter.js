@@ -1,13 +1,16 @@
-const scooterApp = require("./ScooterApp");
+const ScooterApp = require("./ScooterApp");
+
+const scooterApp = new ScooterApp();
 
 class Scooter {
   #user;
   constructor(station, user) {
-    if (station in ScooterApp.stations) {
+    if (station in scooterApp.stations) {
       this._station = station;
     } else {
       throw new Error("Station does not exist");
     }
+
     this.#user = user;
     this._serial = Math.floor(Math.random() * 1000);
     this._charge = Math.floor(Math.random() * 1000);
