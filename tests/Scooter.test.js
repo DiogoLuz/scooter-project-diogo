@@ -11,7 +11,14 @@ describe("scooter object", () => {
 
 //Method tests
 describe("scooter methods", () => {
-  // tests here!
+  test("Checking if rent method works correctly", () => {
+    const scooter = new Scooter("Manhattan", "diogoluz");
+    const consoleSpy = jest.spyOn(console, "log");
+
+    scooter.rent();
+
+    expect(consoleSpy).toHaveBeenCalledWith("Enjoy your ride!");
+  });
   //rent method
   //dock method
   //requestRepair method
