@@ -26,4 +26,9 @@ describe("scooter methods", () => {
   });
   //requestRepair method
   //charge method
+
+  test("charge", async () => {
+    await scooter.charge(); // we need to wait for the charge!
+    expect(scooter.currentCharge).toBe(100);
+  });
 });
