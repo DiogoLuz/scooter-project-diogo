@@ -19,6 +19,11 @@ describe("scooter methods", () => {
     expect(consoleSpy).toHaveBeenCalledWith("Enjoy your ride!");
   });
   //dock method
+
+  test("Check if dock method works correctly", () => {
+    scooter.dock("Queens");
+    expect(scooter.station).toBe("Queens");
+  });
   //requestRepair method
   //charge method
 });
