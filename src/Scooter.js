@@ -13,7 +13,7 @@ class Scooter {
 
     this.#user = user;
     this._serial = Math.floor(Math.random() * 1000);
-    this._charge = Math.floor(Math.random() * 1000);
+    this.currentCharge = Math.floor(Math.random() * 1000);
     this._isBroken = false;
     this._docked = true;
   }
@@ -28,10 +28,6 @@ class Scooter {
 
   get serial() {
     return this._serial;
-  }
-
-  get charge() {
-    return this._charge;
   }
 
   get isBroken() {
@@ -63,6 +59,15 @@ class Scooter {
       this._docked = true;
       this.#user = "";
     }
+  }
+
+  async charge() {
+    console.log("Starting charge");
+
+    await new Promise((resolve) => setTimeout(resolve, 2000)); // wait 2 seconds
+    this.currentCharge = 100;
+
+    console.log("Charge complete");
   }
 }
 
