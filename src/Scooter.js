@@ -54,11 +54,12 @@ class Scooter {
   }
 
   dock(station = "none") {
-    if (station in scooterApp.stations) {
+    if (station in Object.keys(scooterApp.stations)) {
       throw new Error("Station does not exist");
     } else if (station === "none") {
       throw new Error("Docking station required!");
     } else {
+      this._station = station;
       this._docked = true;
       this.#user = "";
     }
