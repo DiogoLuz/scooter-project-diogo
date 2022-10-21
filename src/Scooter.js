@@ -52,6 +52,17 @@ class Scooter {
       console.log("Scooter is broken, please send a repair request.");
     }
   }
+
+  dock(station = "none") {
+    if (station in scooterApp.stations) {
+      throw new Error("Station does not exist");
+    } else if (station === "none") {
+      throw new Error("Docking station required!");
+    } else {
+      this._docked = true;
+      this.#user = "";
+    }
+  }
 }
 
 module.exports = Scooter;
